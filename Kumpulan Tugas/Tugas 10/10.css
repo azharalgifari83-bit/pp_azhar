@@ -1,0 +1,103 @@
+/* RESET DASAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BODY */
+body {
+  background-color: #f4f6f8;
+  color: #333;
+  padding: 40px 20px;
+}
+
+/* JUDUL UTAMA */
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+/* CARD DOCUMENT */
+.document {
+  background-color: #ffffff;
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.document h3 {
+  margin-bottom: 15px;
+  color: #34495e;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* LIST TUGAS */
+.list {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.list ul {
+  list-style: none;
+}
+
+/* ITEM LIST */
+.list li {
+  background-color: #ffffff;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+/* LINK LIST */
+.list li a {
+  display: block;
+  padding: 14px 18px;
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+/* HOVER LIST */
+.list li:hover {
+  transform: translateX(5px);
+}
+
+.list li:hover a {
+  color: #3498db;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  body {
+    padding: 25px 15px;
+  }
+
+  .document,
+  .list {
+    max-width: 100%;
+  }
+}
