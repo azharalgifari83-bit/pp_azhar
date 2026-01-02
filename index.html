@@ -1,56 +1,217 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Jarvis</title>
+    <!-- ======================================================
+         SEO & META TAG
+         Menentukan encoding, deskripsi halaman, dan responsive
+    ======================================================= -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Portofolio pribadi mahasiswa informatika berisi profil, keahlian, pengalaman, dan karya.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph untuk preview media sosial -->
+    <meta property="og:title" content="Portofolio: Azhar Algifari">
+    <meta property="og:image" content="foto.jpg">
+
+    <title>Portofolio Azhar Algifari</title>
+
+    <!-- Menghubungkan file CSS eksternal -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <!-- ======================================================
+         HEADER
+         Berisi judul utama dan navigasi
+    ======================================================= -->
     <header>
-        <h1>Portfolio Saya</h1>
-        <p>Mahasiswa | Web Developer | Kreatif</p>
+        <h1 tabindex="0">Azhar Algifari</h1>
+        <p>Mahasiswa Informatika | Web Developer Pemula</p>
+
+        <!-- Navigasi utama -->
+        <nav aria-label="Navigasi Utama">
+            <ul>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#pendidikan">Pendidikan</a></li>
+                <li><a href="#keahlian">Keahlian</a></li>
+                <li><a href="#projek">Projek</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+                <li><a href="Kumpulan Tugas/Kumpulan tugas.html">Kumpulan Tugas</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="container">
-        <div class="profile">
-            <img src="azhar ganteng.jpeg" alt="Foto Profil" />
-            <h2>AZHAR ALGIFARI</h2>
-            <p>Mahasiswa Universitas Mayasari Bakti</p>
-        </div>
+    <!-- ======================================================
+         MAIN
+         Konten utama halaman
+    ======================================================= -->
+    <main>
+        <!-- ================== TENTANG SAYA ================== -->
+        <section id="tentang" aria-labelledby="judul-tentang">
+            <h2 id="judul-tentang">Tentang Saya</h2>
 
-        <div class="section">
-            <h3>Tentang Saya</h3>
-            <p>
-                hallo perkenalkan nama saya azhar algifari asal dari tasikmalaya,saya lahir pada tanggal 8 maret 2007,
-                saya seorang mahasiswa di universitas mayasari bakti,
-                hobby saya yaitu olahraga dan mendaki gunung
-              
+            <article>
+                <img src="foto.jpg" alt="Foto Azhar Algifari menggunakan kemeja hitam" width="200">
+
+                <p>
+                    Saya adalah mahasiswa <abbr title="Teknologi Informasi">TI</abbr> 
+                    yang tertarik pada pengembangan web dan aksesibilitas.
+                    Saat ini aktif belajar melalui <strong>FreeCodeCamp</strong>.
+                </p>
+
+                <p>
+                    Bergabung di dunia IT sejak 
+                    <time datetime="2023-08-01">Agustus 2023</time>.
+                </p>
+            </article>
+
+            <!-- Aside sebagai informasi tambahan -->
+            <aside>
+                <p><strong>Quote:</strong> "Belajar konsisten lebih penting dari belajar cepat."</p>
+            </aside>
+        </section>
+
+        <!-- ================== RIWAYAT ================== -->
+        <section id="pendidikan">
+            <h2>Riwayat Pendidikan & Pengalaman</h2>
+
+            <!-- Tabel riwayat -->
+            <table>
+                <caption>Riwayat Pendidikan dan Pengalaman</caption>
+
+                <thead>
+                    <tr>
+                        <th>Tahun</th>
+                        <th colspan="2">Institusi / Kegiatan</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>2021</td>
+                        <td colspan="2">SMK - Rekayasa Perangkat Lunak</td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td>Mahasiswa Informatika</td>
+                        <td>Web Development</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Data diperbarui tahun 2025</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- ================== KEAHLIAN ================== -->
+        <section id="keahlian">
+            <h2>Keahlian</h2>
+
+            <!-- Unordered list -->
+            <ul>
+                <li>HTML Semantic</li>
+                <li>CSS Dasar</li>
+                <li>Accessibility Web</li>
+            </ul>
+
+            <!-- Description list -->
+            <dl>
+                <dt>HTML</dt>
+                <dd>Membangun struktur halaman web</dd>
+
+                <dt>CSS</dt>
+                <dd>Mengatur tampilan dan layout</dd>
+            </dl>
+        </section>
+
+        <!-- ================== PROJEK ================== -->
+        <section id="projek">
+            <h2>Karya / Projek</h2>
+
+            <article>
+                <img src="projek.jpg" alt="Tampilan website portofolio sederhana">
+
+                <p>
+                    Website portofolio sederhana menggunakan HTML & CSS.
+                </p>
+
+                <a href="https://github.com" target="_blank" aria-label="Link ke GitHub projek">
+                    Lihat Projek
+                </a>
+            </article>
+
+            <!-- Multimedia iframe -->
+            <iframe 
+                width="300" 
+                height="200"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Video presentasi projek"
+                aria-describedby="deskripsi-video">
+            </iframe>
+
+            <p id="deskripsi-video">
+                Video demo singkat projek web.
             </p>
-        </div>
+        </section>
 
-        <div class="section">
-            <h3>Riwayat pendidikan</h3>
-            <ul>
-                <li>SD PUI CICURUG</li>
-                <li>SMPN 10 TASIKMALAYA</li>
-                <li>SMKN 2 TASIKMALAYA</li>
-            </ul>
-        </div>
+        <!-- ================== FORM KONTAK ================== -->
+        <section id="kontak">
+            <h2>Kontak Saya</h2>
 
-        <div class="section">
-            <h3>Proyek</h3>
-            <ul>
-                <li>Website Portfolio Pribadi</li>
-                <li>Desain UI Aplikasi Mobile</li>
-                <li>Landing Page Produk</li>
-            </ul>
-        </div>
-    </div>
+            <form>
+                <fieldset>
+                    <legend>Form Kontak</legend>
 
+                    <label>
+                        Nama:
+                        <input type="text" name="nama" required minlength="3">
+                    </label>
+
+                    <label>
+                        Email:
+                        <input type="email" name="email" required>
+                    </label>
+
+                    <label>
+                        Nomor HP:
+                        <input type="tel" name="nomor" required maxlength="13">
+                    </label>
+
+                    <label>
+                        Pesan:
+                        <textarea name="pesan" required minlength="5"></textarea>
+                    </label>
+
+                    <!-- Radio Button -->
+                    <p>Jenis Pesan:</p>
+                    <label>
+                        <input type="radio" name="jenis" required> Pertanyaan
+                    </label>
+                    <label>
+                        <input type="radio" name="jenis"> Saran
+                    </label>
+
+                    <!-- Checkbox -->
+                    <label>
+                        <input type="checkbox" required>
+                        Saya menyetujui pengiriman data
+                    </label>
+
+                    <button type="submit">Kirim</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <!-- ======================================================
+         FOOTER
+    ======================================================= -->
     <footer>
-        <p>&copy; 2025 Portfolio Jarvis</p>
+        <p>&copy; 2025 Azhar Algifari</p>
     </footer>
+
 </body>
 </html>
-
