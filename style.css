@@ -1,66 +1,269 @@
+/* ======================================================
+   RESET & VARIABLE WARNA (Modern Theme)
+====================================================== */
+:root {
+    --primary: #1f2933;
+    --secondary: #3b82f6;
+    --accent: #e5e7eb;
+    --text: #111827;
+    --bg: #f9fafb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ======================================================
+   GLOBAL STYLE
+====================================================== */
 body {
+    font-family: "Segoe UI", system-ui, sans-serif;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #eef1f7;
-    color: #333;
-}
-
-header {
-    background: linear-gradient(to right, #1e3c72, #2a5298);
-    padding: 60px 20px;
-    text-align: center;
-    color: white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-}
-
-.profile {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.profile img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-h2 {
-    margin-top: 10px;
-}
-
-.section {
-    background: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-}
-
-ul {
-    padding-left: 20px;
+    background-color: var(--bg);
+    color: var(--text);
     line-height: 1.7;
 }
 
+/* ======================================================
+   HEADER
+====================================================== */
+header {
+    background: linear-gradient(135deg, #111827, #1f2933);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    transition: background 0.5s ease;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+header p {
+    opacity: 0.9;
+}
+
+/* ======================================================
+   NAVIGATION
+====================================================== */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* underline animation */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--secondary);
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--secondary);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ======================================================
+   MAIN LAYOUT
+====================================================== */
+main {
+    max-width: 1000px;
+    margin: -40px auto 0;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 1s ease;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--secondary);
+    padding-left: 15px;
+}
+
+/* ======================================================
+   IMAGE STYLE
+====================================================== */
+img {
+    border-radius: 15px;
+    max-width: 100%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ======================================================
+   ARTICLE & CARD STYLE
+====================================================== */
+article {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* ======================================================
+   TABLE STYLE
+====================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+caption {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+thead {
+    background-color: var(--primary);
+    color: white;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+tbody tr {
+    transition: background 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: var(--accent);
+}
+
+/* ======================================================
+   LIST STYLE
+====================================================== */
+ul li {
+    padding: 8px 0;
+}
+
+dl dt {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+dl dd {
+    margin-left: 20px;
+    color: #4b5563;
+}
+
+/* ======================================================
+   LINK & BUTTON
+====================================================== */
+a {
+    color: var(--secondary);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1d4ed8;
+}
+
+button {
+    background: var(--secondary);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* ======================================================
+   FORM STYLE
+====================================================== */
+form label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* ======================================================
+   FOOTER
+====================================================== */
 footer {
     text-align: center;
-    padding: 25px;
-    background: #1e3c72;
+    padding: 20px;
+    background: var(--primary);
     color: white;
     margin-top: 40px;
-    box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
+}
+
+/* ======================================================
+   ANIMATION
+====================================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
