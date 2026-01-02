@@ -1,0 +1,152 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* BODY */
+body {
+  background: linear-gradient(135deg, #e3f2fd, #f9f9f9);
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* CONTAINER */
+.form-container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 600px;
+  padding: 30px 35px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* JUDUL */
+.form-container h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.form-container p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* SUB JUDUL */
+.form-container h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #34495e;
+  font-size: 18px;
+}
+
+/* HR */
+.form-container hr {
+  margin: 25px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* LABEL */
+label {
+  font-weight: 600;
+  color: #333;
+}
+
+/* INPUT & SELECT */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="file"],
+select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+/* FOCUS */
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* RADIO & CHECKBOX */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 6px;
+  transform: scale(1.05);
+}
+
+/* COLOR */
+input[type="color"] {
+  width: 90px;
+  height: 40px;
+  padding: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+/* FORM BUTTON */
+form button {
+  margin-top: 10px;
+}
+
+/* BUTTON */
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* BUTTON STYLE */
+button[type="submit"] {
+  background-color: #3498db;
+  color: #fff;
+}
+
+button[type="reset"] {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+/* BUTTON HOVER */
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* DISABLED & READONLY */
+input:disabled {
+  background-color: #eee;
+  color: #888;
+}
+
+input[readonly] {
+  background-color: #fafafa;
+  border: 1px dashed #aaa;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 20px;
+  }
+}
